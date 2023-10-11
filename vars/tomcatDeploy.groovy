@@ -1,6 +1,4 @@
 def call(ip.creds,warfiles){
-   stage("tomcat deploy"){
-            steps{
                 sshagent(['creds']) {
     // some block
     sh "scp -o StrictHostKeyChecking=no target/warfile ec2-user@ip:/opt/tomcat9/webapps"
