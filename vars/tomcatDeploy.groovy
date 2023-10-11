@@ -1,4 +1,4 @@
-def call(ip.creds,warfiles){
+def call(ip,creds,warfiles){
                 sshagent(['creds']) {
     // some block
     sh "scp -o StrictHostKeyChecking=no target/warfile ec2-user@ip:/opt/tomcat9/webapps"
